@@ -11,8 +11,10 @@ import {
   displayError,
   displayApiError,
   updateScreenReaderConfirmation,
+  updateDisplay,
 } from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
+
 const currentLoc = new CurrentLocation();
 
 const initApp = () => {
@@ -112,7 +114,7 @@ const saveLocation = () => {
 };
 
 const setUnitPref = () => {
-  const unitIcon = document.querySelector(".fa-chart.column");
+  const unitIcon = document.querySelector(".fa-chart-column");
   addSpinner(unitIcon);
   currentLoc.toggleUnit();
   updateDataAndDisplay(currentLoc);
